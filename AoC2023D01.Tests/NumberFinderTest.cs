@@ -58,5 +58,18 @@
             // Assert
             Assert.Equal(expected, result);
         }
+        [Theory]
+        [InlineData("oneight", 18)]
+        [InlineData("twone", 21)]
+        [InlineData("nineight", 98)]
+        public void GetLineValueWithWords_OverlappingWords_ReturnsExpectedValue(string line, int expected)
+        {
+            // Arrange
+            var sut = new NumberFinder();
+            // Act
+            var result = sut.GetLineValueWithWords(line);
+            // Assert
+            Assert.Equal(expected, result);
+        }
     }
 }
