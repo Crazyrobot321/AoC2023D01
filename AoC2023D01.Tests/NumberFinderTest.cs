@@ -85,5 +85,16 @@
             // Assert
             Assert.Equal(expected, result);
         }
+        [Fact]
+        public void SumAllLineValuesWithWords_PuzzleExample_Returns281()
+        {
+            // Arrange
+            var sut = new NumberFinder();
+            var text = "two1nine\neightwothree\nabcone2threexyz\nxtwone3four\n4nineeightseven2\nzoneight234\n7pqrstsixteen";
+            // Act
+            var result = sut.SumAllLineValuesWithWords(text);
+            // Assert
+            Assert.Equal(281, result);
+        }
     }
 }
