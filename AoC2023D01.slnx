@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="AoC2023D01/AoC2023D01.csproj" />
+  <Project Path="Common.Tests/Common.Tests.csproj" />
+  <Project Path="Common/Common.csproj" />
+</Solution>
