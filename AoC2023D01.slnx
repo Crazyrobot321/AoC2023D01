@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="AoC2023D01.Tests/AoC2023D01.Tests.csproj" Id="18be51f0-d737-447f-a6a6-b4ea369ff94a" />
   <Project Path="AoC2023D01/AoC2023D01.csproj" />
   <Project Path="Common.Tests/Common.Tests.csproj" />
   <Project Path="Common/Common.csproj" />
