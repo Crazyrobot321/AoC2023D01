@@ -31,5 +31,15 @@
             // Assert
             Assert.Equal(142, result);
         }
+        [Fact]
+        public void SumAllLineValues_EmptyInput_Returns0()
+        {
+            // Arrange
+            var sut = new NumberFinder();
+            // Act
+            var result = sut.SumAllLineValues(" ");
+            // Assert
+            Assert.Equal(0, result);
+        }
     }
 }
