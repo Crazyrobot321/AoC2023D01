@@ -8,7 +8,6 @@
         [InlineData("a1b2c3d4e5f", 15)]
         [InlineData("treb7uchet", 77)]
         [InlineData("no digits here", 0)]
-        [InlineData(" ", 0)]
         public void GetLineValue_ReturnsExpectedValue(string input, int expected)
         {
             // Arrange
@@ -86,7 +85,7 @@
             Assert.Equal(expected, result);
         }
         [Fact]
-        public void SumAllLineValuesWithWords_PuzzleExample_Returns281()
+        public void SumAllLineValuesWithWords_PuzzleExample_ReturnsTwoHundredEightyOne()
         {
             // Arrange
             var sut = new NumberFinder();
@@ -95,6 +94,16 @@
             var result = sut.SumAllLineValuesWithWords(text);
             // Assert
             Assert.Equal(281, result);
+        }
+        [Fact]
+        public void SumAllLineValuesWithWords_WhitespaceOnlyInput_ReturnsZero()
+        {
+            // Arrange
+            var sut = new NumberFinder();
+            // Act
+            var result = sut.SumAllLineValuesWithWords(" ");
+            // Assert
+            Assert.Equal(0, result);
         }
     }
 }
