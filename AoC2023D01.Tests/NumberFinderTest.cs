@@ -9,7 +9,7 @@
         [InlineData("treb7uchet", 77)]
         [InlineData("no digits here", 0)]
         [InlineData(" ", 0)]
-        public void GetLineValues_ShouldReturnCorrectNumber(string input, int expected)
+        public void GetLineValue_ReturnsExpectedValue(string input, int expected)
         {
             // Arrange
             var numberFinder = new NumberFinder();
@@ -32,7 +32,7 @@
             Assert.Equal(142, result);
         }
         [Fact]
-        public void SumAllLineValues_EmptyInput_Returns0()
+        public void SumAllLineValues_WhitespaceOnlyInput_ReturnsZero()
         {
             // Arrange
             var sut = new NumberFinder();
@@ -40,6 +40,23 @@
             var result = sut.SumAllLineValues(" ");
             // Assert
             Assert.Equal(0, result);
+        }
+        [Theory]
+        [InlineData("two1nine", 29)]
+        [InlineData("eightwothree", 83)]
+        [InlineData("abcone2threexyz", 13)]
+        [InlineData("xtwone3four", 24)]
+        [InlineData("4nineeightseven2", 42)]
+        [InlineData("zoneight234", 14)]
+        [InlineData("7pqrstsixteen", 76)]
+        public void GetLineValueWithWords_ReturnsExpectedValue(string line, int expected)
+        {
+            // Arrange
+            var sut = new NumberFinder();
+            // Act
+            var result = sut.GetLineValueWithWords(line);
+            // Assert
+            Assert.Equal(expected, result);
         }
     }
 }
