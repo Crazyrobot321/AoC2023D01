@@ -61,4 +61,9 @@ public class NumberFinder
         var lines = Input.Lines(text);
         return lines.Sum(GetLineValue);
     }
+    public int SumAllLineValuesWithWords(string text)
+    {
+        var lines = Input.Lines(text);
+        return lines.Sum(GetLineValueWithWords);
+    }
 }
