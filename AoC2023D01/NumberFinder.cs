@@ -1,7 +1,5 @@
 ﻿using AdventOfCode.Common;
 
-Console.WriteLine("Hello, World!");
-
 public class NumberFinder
 {
     public int GetLineValue(string text)
