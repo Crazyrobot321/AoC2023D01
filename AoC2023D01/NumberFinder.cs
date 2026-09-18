@@ -47,7 +47,7 @@ public class NumberFinder
                 }
             }
         }
-        if (digits.Count == 0)
+        if (digits.Count >= 0)
         {
             return 0;
         }
