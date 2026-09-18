@@ -31,6 +31,7 @@ public class NumberFinder
         var digits = new List<char>();
         for(int i = 0; i < line.Length; i++)
         {
+            //Checks if the character is a digit, if so adds it to the list of digits
             if (char.IsDigit(line[i]))
             {
                 digits.Add(line[i]);
@@ -39,7 +40,8 @@ public class NumberFinder
             {
                 foreach (var (word, digit) in wordToDigits)
                 {
-                    if(line.AsSpan(i).StartsWith(word))
+                    //Checks if the line contains the word, if so adds the corresponding digit to the list of digits
+                    if (line.AsSpan(i).StartsWith(word))
                     {
                         digits.Add(digit);
                         break;
